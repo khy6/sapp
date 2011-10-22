@@ -1,4 +1,10 @@
 Sapp::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/research"
+
+  get "pages/news"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
