@@ -1,6 +1,9 @@
 Sapp::Application.routes.draw do
 
 
+  get "users/new"
+
+  match '/signup',  :to => 'users#new'
   match '/news', :to => 'pages#news'
   match '/research',   :to => 'pages#research'
   match '/about',    :to => 'pages#about'
