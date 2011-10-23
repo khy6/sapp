@@ -3,12 +3,41 @@
   <head>
     <title><%= @title %></title>
     <%= csrf_meta_tag %>
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
 <%= stylesheet_link_tag 'bootstrap', :media => 'screen' %>
-
-
-
+<%= stylesheet_link_tag 'custom', :media => 'screen' %>
   </head>
-  <body>
-    <%= yield %>
+  <body> <div class="topbar">
+    <div class="fill">
+        <div class="container">
+            <h3><a href="#">Sharepedia.co.uk</a></h3>
+            <ul>
+                <li><%=link_to "Home",'#' %></li>
+                <li><%=link_to "News",'#'%></li>
+                <li><%=link_to "Research",'#'%></li>
+                    </ul>
+         
+  <form action="" class="pull-right">
+            <input class="input-small" type="text" placeholder="Username">
+            <input class="input-small" type="password" placeholder="Password">
+            <button class="btn" type="submit">Sign in</button>
+          </form> 
+        </div>
+
+   </div>
+
+<div class="container">
+<div class="content">
+<div class="row">
+          <div class="span10">
+<%= yield %>
+
+</div>
+</div>
+</div>
+</div>
   </body>
 </html>
